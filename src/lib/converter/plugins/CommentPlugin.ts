@@ -136,7 +136,7 @@ export class CommentPlugin extends ConverterComponent {
     private onCreateTypeParameter(context: Context, reflection: TypeParameterReflection, node?: ts.Node) {
         const comment = reflection.parent.comment;
         if (comment) {
-            let tag = comment.getTag('typeparam', reflection.name);
+            let tag = comment.getTag('template', reflection.name);
             if (!tag) {
                 tag = comment.getTag('param', `<${reflection.name}>`);
             }
